@@ -18,7 +18,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         )
         .await?;
 
-    let payload = "Hello World".as_bytes();
+    let payload = b"Hello World";
 
     channel
         .basic_publish(
