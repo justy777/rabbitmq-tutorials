@@ -18,8 +18,8 @@ impl std::error::Error for Error {}
 impl Display for Error {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
-            Error::CannotDecodeReply => write!(f, "Cannot decode reply"),
-            Error::NoReply => write!(f, "No reply arrived"),
+            Self::CannotDecodeReply => write!(f, "Cannot decode reply"),
+            Self::NoReply => write!(f, "No reply arrived"),
         }
     }
 }

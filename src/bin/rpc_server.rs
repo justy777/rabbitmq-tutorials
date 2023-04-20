@@ -21,9 +21,9 @@ impl std::error::Error for Error {}
 impl Display for Error {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
-            Error::CannotDecodeArg => write!(f, "Cannot decode argument"),
-            Error::MissingReplyTo => write!(f, "Missing 'reply to' property"),
-            Error::MissingCorrelationId => write!(f, "Missing 'correlation id' property"),
+            Self::CannotDecodeArg => write!(f, "Cannot decode argument"),
+            Self::MissingReplyTo => write!(f, "Missing 'reply to' property"),
+            Self::MissingCorrelationId => write!(f, "Missing 'correlation id' property"),
         }
     }
 }
